@@ -1,27 +1,48 @@
-.issue-box {
-    border: 2px solid red;
+/* BUTTONS */
+.btn {
     border-radius: 5%;
-    padding: 10px;
-    margin: 10px;
+    color: white;
 }
 
+/* MAIN FORM */
 form {
-    background-color: #D3D3D3;
+    background-color: #D3D3D3;*/
     border: 1px solid #C0C0C0;
     border-radius: 5%;
     margin: 10px;
 }
-
-.form-issue {
-    background-color: white;
-}
-
+    
 .form-group {
     padding: 10px;
 }
 
-button {
+.btn-submit {
     padding: 10px;
     display: block;
-    background-color: orange;
+    background-color: blue;
+    color: white;
+}
+
+.btn-append {
+    border-radius: 5%;
+}
+
+.btn-status {
+    background-color: #5bc0de;
+}
+
+.btn-close {
+    background-color: #ffcc00;
+}
+
+.btn-delete {
+    background-color: red;
+}
+
+.issues {
+    margin: 5%;
+}
+
+.li-inline {
+    display: inline-block;
 }

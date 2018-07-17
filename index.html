@@ -8,22 +8,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <title>Issue Tracker</title>
+    <title>Dog Petting Tracker</title>
   </head>
   <body>
     <div class="container">
     
     <!-- Head -->
-    <h1>Issue Tracker</h1>
+    <h1>Dog Petting Tracker</h1>
 
     <!-- Form -->
     <form>
       <div class="form-group">
-        <label for="formGroupExampleInput">Issue</label>
+        <h2>Pet a New Dog</h2>
+        <label for="formGroupExampleInput">Dog to be petted</label>
         <input type="text" class="form-control" id="field-issue" placeholder="Describe the issue">
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput2">Severity</label>
+        <label for="formGroupExampleInput2">Urgency</label>
         <select class="custom-select" id="field-severity" required>
           <option value="Low">Low</option>
           <option value="Medium">Medium</option>
@@ -32,26 +33,16 @@
         <!--<div class="invalid-feedback">Example invalid custom select feedback</div>-->
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput3">Assigned to:</label>
+        <label for="formGroupExampleInput3">Petter</label>
         <input type="text" class="form-control" id="field-assigned" placeholder="Enter a name">
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" id="trackbutton" >Submit form</button>
+        <button class="btn btn-submit" id="trackbutton" >Track Dog Petting</button>
       </div>
     </form>
 
   <!-- Issues -->
-  <div id="display-issues">
-    
-<!--    <form class="form-issue">
-      <div>
-        <button class="btn" type="submit">open</button>
-        <button class="btn" type="submit">Close</button>
-        <button class="btn" type="submit">Delete</button>
-      </div>
-    </form>-->
-
-  </div>
+  <div id="display-issues"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
