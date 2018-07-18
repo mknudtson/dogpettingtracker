@@ -60,36 +60,18 @@ $(document).ready(function(){ // wait until html loaded
 
 ////////
 
+// INSTRUCTIONS
+
+// test whether button works // store each input as a var // HOMEWORK - ADD AND DELETE
+
+////////
+
 // REQUIREMENTS
 
 // _x_ when btn-submit pressed, all input fields should be restored to default input
 // _x_ when btn-delete pressed, issues should disappear
 // _x_ when any given btn-delete, ONLY its corresponding issue should disappears, where an "issue" is a ul with the class .issues
-// __ when btn-close pressed, text of btn-status should be toggled from open to closed
+// __ when button .btn-close pressed, text of button .btn-status should change to closed (it should not toggle)
 // __ when issue (ul) created, random issue number should be generated
 // __ various stylistic doodads (e.g. imgs as list item markers)
 // __ margins and padding ; blue rim around all button colours ; more ???
-
-////////
-
-// SCRAP PAPER
-
-// test whether button works // store each input as a var // HOMEWORK - ADD AND DELETE
-
-// arrayElems[0].remove();
-
-//             // 1st, config delete button to delete uls with .issues
-//             // $('.btn-delete').on('click', function(){
-//             //     $(".issues").hide();
-//             // });
-
-// seems that it may be better to use hide, rather than remove, since then the index doesn't change
-
-// let uniqueUL = $(this).parent().parent();
-
-//             // create an array of uls
-//             let arrayElems = document.getElementsByTagName('ul');
-//             console.log(arrayElems);
-//             // create an array of delete buttons (same indices as uls)
-//             let arrayDeleteButtons = document.getElementsByClassName('btn-delete');
-//             console.log(arrayDeleteButtons);
