@@ -6,7 +6,7 @@
 
 /* MAIN FORM */
 form {
-    background-color: #D3D3D3;*/
+    background-color: #D3D3D3;
     border: 1px solid #C0C0C0;
     border-radius: 5%;
     margin: 10px;
@@ -28,7 +28,7 @@ form {
 }
 
 .btn-status {
-    background-color: #5bc0de;
+    background-color: #5bc0de; 
 }
 
 .btn-close {

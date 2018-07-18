@@ -42,11 +42,16 @@ $(document).ready(function(){ // wait until html loaded
             });
 
             // uniquely id a ul and when that ul's btn-close is clicked toggle the text of ONLY that ul's btn-status
-             // the below almost works as a selector - problem is it loops over the current and all following issues
-            $('.btn-close').on("click", function(event) {
-                event.preventDefault(); 
-                let statusText = $(this).parent().siblings('li:first-child').text();
-                console.log(statusText);
+            
+            $('.btn-close').bind('click', function(){
+                $(this).toggleClass('tog');
+                if ($(this).hasClass("tog")) {
+                    // does not work on 2nd issue when there are 3 or more ! why not ?
+                    $(this).parent().parent().children(":first-child").html(`<button class="btn btn-append btn-status" type="submit">closed</button>`);
+                } else {
+                    $(this).parent().parent().children(":first-child").html(`<button class="btn btn-append btn-status" type="submit">open</button>`);
+                }
+
             });
 
         }); // is this necessary?
