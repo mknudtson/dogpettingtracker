@@ -6,7 +6,7 @@ $(document).ready(function(){
     // test whether button works
     // store each input as a var
     // HOMEWORK ADD AND DELETE
-    
+
     $("#trackbutton").on("click", function(event) { // on is the new bind
         event.preventDefault();     
 
@@ -17,7 +17,7 @@ $(document).ready(function(){
             // add div, although i'm not sure it's needed as it's adding to a div
             // note #display-issues is a div already in the body of the html file
             $('#display-issues').append(`<div class="issues"></ul>`).css('background-color', 'yellow');
-            
+                        
             // to div, append ul; each group of issue chars is a ul and is styled
             $('.issues:last').append(`<ul class="ul-issue">`).css('border', '2px solid #DAA520').css('border-radius', '2%');
             
@@ -38,22 +38,47 @@ $(document).ready(function(){
             issueSeverity = $('#field-severity').val("Low");
             issueAssigned = $('#field-assigned').val("");
             
-            // 1st, config delete button to delete uls with .issues
-            // 2nd, config it to delete THE RIGHT ul with arrays...
-            $('.btn-delete').on('click', function(){
-                $(".issues").hide();
+            $('.btn-delete').on("click", function(event) {
+                event.preventDefault(); 
+                // assign unique id to corr ul and then remove only that ul
+                let uniqueUL = $(this).parentsUntil('#display-issues');
+                // console.log(uniqueUL);
+                uniqueUL.remove();
             });
+        });
 
-            // _x_ when btn-submit pressed, all input fields should be restored to default input
-            // __ when btn-delete pressed, issue should disappear
-            // __ when btn-close  pressed, text of btn-status should be toggled from open to closed
-            
-    });
-    
-            if ($('button').hasClass("blue")) {
-                $('button').attr("value", "closed");
-            } else {
-                $('button').attr("value", "open");
-            } 
-    
 });
+
+////////
+
+// REQUIREMENTS
+
+// _x_ when btn-submit pressed, all input fields should be restored to default input
+// _x_ when btn-delete pressed, issues should disappear
+// __ when any given btn-delete, ONLY its corresponding issue should disappears, where an "issue" is a ul with the class .issues
+// __ when btn-close  pressed, text of btn-status should be toggled from open to closed
+// __ random issue number
+// __ various stylistic doodads
+
+////////
+
+// SCRAP PAPER
+
+// arrayElems[0].remove();
+
+//             // 1st, config delete button to delete uls with .issues
+//             // $('.btn-delete').on('click', function(){
+//             //     $(".issues").hide();
+//             // });
+
+
+// seems that it may be better to use hide, rather than remove, since then the index doesn't change
+
+// let uniqueUL = $(this).parent().parent();
+
+//             // create an array of uls
+//             let arrayElems = document.getElementsByTagName('ul');
+//             console.log(arrayElems);
+//             // create an array of delete buttons (same indices as uls)
+//             let arrayDeleteButtons = document.getElementsByClassName('btn-delete');
+//             console.log(arrayDeleteButtons);
