@@ -1,13 +1,9 @@
-// testing
-// alert("hello");
+// alert("hello"); // testing
 
-// wait until html loaded
-$(document).ready(function(){
-    // test whether button works
-    // store each input as a var
-    // HOMEWORK ADD AND DELETE
-
+$(document).ready(function(){ // wait until html loaded
+    
     $("#trackbutton").on("click", function(event) { // on is the new bind
+        
         event.preventDefault();     
 
             let issueInput = $('#field-issue').val();
@@ -16,7 +12,7 @@ $(document).ready(function(){
         
             // add div, although i'm not sure it's needed as it's adding to a div
             // note #display-issues is a div already in the body of the html file
-            $('#display-issues').append(`<div class="issues"></ul>`).css('background-color', 'yellow');
+            $('#display-issues').append(`<div class="issues"></ul>`); // .css('background-color', 'yellow') // testing
                         
             // to div, append ul; each group of issue chars is a ul and is styled
             $('.issues:last').append(`<ul class="ul-issue">`).css('border', '2px solid #DAA520').css('border-radius', '2%');
@@ -38,14 +34,22 @@ $(document).ready(function(){
             issueSeverity = $('#field-severity').val("Low");
             issueAssigned = $('#field-assigned').val("");
             
+            // uniquely id a ul and when its corr delete button is clicked delete only that ul
             $('.btn-delete').on("click", function(event) {
                 event.preventDefault(); 
-                // assign unique id to corr ul and then remove only that ul
                 let uniqueUL = $(this).parentsUntil('#display-issues');
-                // console.log(uniqueUL);
                 uniqueUL.remove();
             });
-        });
+
+            // uniquely id a ul and when that ul's btn-close is clicked toggle the text of ONLY that ul's btn-status
+             // the below almost works as a selector - problem is it loops over the current and all following issues
+            $('.btn-close').on("click", function(event) {
+                event.preventDefault(); 
+                let statusText = $(this).parent().siblings('li:first-child').text();
+                console.log(statusText);
+            });
+
+        }); // is this necessary?
 
 });
 
@@ -55,14 +59,17 @@ $(document).ready(function(){
 
 // _x_ when btn-submit pressed, all input fields should be restored to default input
 // _x_ when btn-delete pressed, issues should disappear
-// __ when any given btn-delete, ONLY its corresponding issue should disappears, where an "issue" is a ul with the class .issues
-// __ when btn-close  pressed, text of btn-status should be toggled from open to closed
-// __ random issue number
-// __ various stylistic doodads
+// _x_ when any given btn-delete, ONLY its corresponding issue should disappears, where an "issue" is a ul with the class .issues
+// __ when btn-close pressed, text of btn-status should be toggled from open to closed
+// __ when issue (ul) created, random issue number should be generated
+// __ various stylistic doodads (e.g. imgs as list item markers)
+// __ margins and padding ; blue rim around all button colours ; more ???
 
 ////////
 
 // SCRAP PAPER
+
+// test whether button works // store each input as a var // HOMEWORK - ADD AND DELETE
 
 // arrayElems[0].remove();
 
@@ -70,7 +77,6 @@ $(document).ready(function(){
 //             // $('.btn-delete').on('click', function(){
 //             //     $(".issues").hide();
 //             // });
-
 
 // seems that it may be better to use hide, rather than remove, since then the index doesn't change
 
