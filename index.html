@@ -20,12 +20,14 @@
     <form>
       <div class="form-group">
         <h2>Pet a New Dog</h2>
-        <label for="formGroupExampleInput">Dog to be petted</label>
-        <input type="text" class="form-control" id="field-issue" placeholder="Describe the issue">
+          <label for="formGroupExampleInput">Dog to be petted</label>
+          <img src="ms-icon-dog-mini.png"/>
+          <input type="text" class="form-control field" id="field-issue" placeholder="Enter a dog">
       </div>
       <div class="form-group">
         <label for="formGroupExampleInput2">Urgency</label>
-        <select class="custom-select" id="field-severity" required>
+        <img src="ms-icon-urg-mini.png"/>
+        <select class="custom-select field" id="field-severity" required>
           <option value="Low">Low</option>
           <option value="Medium">Medium</option>
           <option value="High">High</option>
@@ -34,7 +36,8 @@
       </div>
       <div class="form-group">
         <label for="formGroupExampleInput3">Petter</label>
-        <input type="text" class="form-control" id="field-assigned" placeholder="Enter a name">
+        <img src="ms-icon-pet-mini.png"/>
+        <input type="text" class="form-control field" id="field-assigned" placeholder="Enter a petter">
       </div>
       <div class="form-group">
         <button class="btn btn-submit" id="trackbutton" >Track Dog Petting</button>
@@ -43,6 +46,8 @@
 
   <!-- Issues -->
   <div id="display-issues"></div>
+
+<p id="btm">Go pet a <img src="ms-icon-dog-mini.png">!</p>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,4 +1,15 @@
+/* HEADING */
+
+h1, h2 {
+    text-align: center;
+}
+
 /* BUTTONS */
+
+button {
+    box-shadow:none !important;
+}
+
 .btn {
     border-radius: 5%;
     color: white;
@@ -6,12 +17,11 @@
 
 /* MAIN FORM */
 form {
-    background-color: #D3D3D3;
+    background-color: #fafafa;
     border: 1px solid #C0C0C0;
-    border-radius: 5%;
-    margin: 10px;
+    border-radius: 1%;
 }
-    
+
 .form-group {
     padding: 10px;
 }
@@ -40,9 +50,52 @@ form {
 }
 
 .issues {
-    margin: 5%;
+    margin: 2% 0;
 }
+
+.field {
+    display: inline;
+}
+
+label {
+    display: block;
+}
+
+input, select {
+    width: 96% !important;
+}
+
+/* LIST ITEMS */
 
 .li-inline {
     display: inline-block;
+}
+
+ul {
+    width: 50%;
+}
+
+li {
+    list-style-type: none;
+    margin: 2%;
+}
+
+.li-dog {
+    background: url("ms-icon-dog-mini.png") 0 50% no-repeat;
+    padding-left: 36px;
+}
+
+.li-urg {
+    background: url("ms-icon-urg-mini.png") 0 50% no-repeat;
+    padding-left: 36px;
+}
+
+.li-pet {
+    background: url("ms-icon-pet-mini.png") 0 50% no-repeat;
+    padding-left: 36px;
+}
+
+#btm {
+    text-align: center;
+    margin: 2% 0;
 }
